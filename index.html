@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="imagen_d" src="assets/file.png" alt="Imagen de la letra 'D' en cursiva">  
+        <h1 class="texto_titulo"> 
+            <strong> ENCRIPTADOR DE TEXTO</strong>
+         </h1>
+    </header>
+    
+    <main class="presentacion">
+        <div class="centro">
+            <textarea id="encriptar" class="input" placeholder="Ingrese el texto aquí"></textarea>   
+            <div class="bloque">
+                <div class="instruccion">
+                    <img src="assets/bi_exclamation-circle-fill.png" alt="Imagen del signo de exclamación">
+                    <h6>Solo letras minúsculas y sin acentos</h6>
+                </div>  
+                <div class="botones">
+                    <button onclick="funcionEncriptar()" class="diseño_botones"> Encriptar</button>
+                    <button onclick="funcionDesencriptar()" class="diseño_botones"> Desencriptar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="espacio_encriptacion">
+            <div id="elemento_oculto" style="visibility: hidden;">
+                <p>.</p>
+            </div>
+            <div id="encriptacion">
+                <img class="gif" src="assets/giphy (1).gif" alt="Gif de un detective mirando con una lupa">
+            </div>
+            <div id="encriptacion2">
+                <h3>
+                 <strong> Ningún mensaje fue encontrado </strong> 
+
+                 </h3>
+            </div>
+            <div id="encriptacion3">
+                <h5>Ingresa el texto que desees encriptar o desencriptar.</h5>
+            </div>
+            <div id="elemento_oculto2" style="visibility: hidden;">
+                <button id="copy" class="diseño_boton_copiar" onclick="copy()"> Copiar</button>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer class="footer">
+        <p> Desarrollado por Daniela Martínez</p>
+        <h5>ladmartinezb@gmail.com</h5>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
