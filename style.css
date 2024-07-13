@@ -1,81 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 :root {
- --fuente-inter: 'Inter',sans-serif;
- --color-primario: #AEADF0;
- --color-secundario: #f6f6f6;
- --color-terciario: #565676;
- --color-cuaternario: #6819f0;
- --color-botones: #8c79f7;
+    --fuente-inter: 'Inter', sans-serif;
+    --color-primario: #AEADF0;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #565676;
+    --color-cuaternario: #6819f0;
+    --color-botones: #8c79f7;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
 }
 
 body {
-    background-color:  var(--color-primario);
-    font-family: 'Arial', sans-serif; 
+    background-color: var(--color-primario);
+    font-family: 'Arial', sans-serif;
 }
 
 .texto_titulo {
     color: var(--color-secundario);
-    font-size: 2.5 rem;
+    font-size: 2.5rem;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
 }
 
 .header {
     display: flex;
-    background-color:var(--color-terciario);
+    background-color: var(--color-terciario);
     padding: 2%;
-    gap: 300px;
-    align-items: center;
+    justify-content: flex-start;
 }
 
 .imagen_d {
-    width: 5%;
-    height: 5%;
+    width: 7%; 
+    height: auto; 
 }
+
 
 .presentacion {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 1%;
-}
+    width: 100%;
 
+}
 
 .centro {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+    width: 100%; 
+
+
 }
 
 .input {
     background-color: var(--color-primario);
     border: 0;
     outline: none;
-    color:var(--color-secundario);
+    color: var(--color-secundario);
     font-size: 2rem;
     text-align: left;
-    margin-bottom: 20px;
-    padding-bottom: 50%;
-    padding-left: 50%;
-    margin-top: 10%;
-    font-family: var(--fuente-inter); 
-    
+    font-family: var(--fuente-inter);
+    width: 80%;  
+    margin-bottom: 50%;
+    padding-left: 10%;
+   
 }
 
 .input::placeholder {
     color: rgb(0, 29, 143);
-    font-family: var(--fuente-inter); 
+    font-family: var(--fuente-inter);
 }
 
 .bloque {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 10% 0% 0% 60%;
+    width: 80%; 
+    padding-left: 10%;
+
 }
 
 .instruccion {
@@ -83,31 +100,49 @@ body {
     gap: 10px;
     align-items: center;
     color: #6f7675;
+    
 }
 
 .botones {
     display: flex;
-    gap: 40px;
+    gap: 20px; 
+    justify-content: center; 
 }
 
 .diseño_botones {
     border-radius: 30px;
     border: 2px solid var(--color-cuaternario);
     padding: 20px 70px;
-    color:var(--color-secundario);
-    font-size: 1 rem;
+    color: var(--color-secundario);
+    font-size: 1rem;
     background-color: var(--color-botones);
-    
+   
 }
 
 .diseño_botones:hover {
-background-color: var(--color-terciario);
+    background-color: var(--color-terciario);
 }
+
+.diseño_boton_copiar {
+    border-radius: 30px;
+    border: 2px solid var(--color-cuaternario);
+    padding: 20px 80px; 
+    margin-top: 15%;
+    font-size: 1rem;
+    background-color: var(--color-botones);
+    color: var(--color-secundario);
+}
+
+.diseño_boton_copiar:hover {
+    background-color: var(--color-terciario);
+}
+
+
 .gif {
     width: 80%;
     height: 80%;
-   
 }
+
 .espacio_encriptacion {
     background-color: var(--color-secundario);
     border-radius: 32px;
@@ -116,98 +151,100 @@ background-color: var(--color-terciario);
     align-items: center;
     text-align: center;
     gap: 30px;
-    width: 25%;
-    margin:1%;
+    margin: 1%;
     justify-content: center;
     padding: 3%;
     overflow: auto;
- 
+    width: 55%; 
 }
 
- 
-.diseño_boton_copiar{
-    border-radius: 30px;
-    border: 2px solid var(--color-cuaternario);;
-    padding: 20px 90px;
-    margin-top: 15%;
-    font-size: 1 rem;
-    background-color: var(--color-botones);
-    color:var(--color-secundario);
-   
-}
-
-.diseño_boton_copiar:hover {
-    background-color: var(--color-terciario);
-}
 
 #encriptacion3 {
-    color:#4d5150 ;
+    color: #4d5150;
 }
-
 
 .footer {
     background-color: var(--color-terciario);
     padding: 24px;
     color: var(--color-secundario);
     text-align: center;
+    width: 100%;
 }
 
-@media (max-width: 930px ){
+@media (max-width: 800px) {
 
-    .header {
+    .texto_titulo {
+        font-size: 2rem; 
+
+    }
+    .header{
+        gap:10%
+    }
+    .input {
         padding: 5%;
-        padding-left:10%;
-        gap: 140px;
+        font-size: 1.1rem;
     }
-    .input{
-        padding-left: 0;
-    }
-    .presentacion{
+    .presentacion {
         flex-direction: column;
-        
+    }
+    .botones {
+        margin-right: 6%;
+        gap: 10px; 
+        padding-bottom: 5%;
+    }
+    .diseño_botones {
+        padding: 15px 40px; 
+        font-size: 0.8rem;
     }
 
-    .bloque{
-       padding-left: 10%;
-      
-    }
     .espacio_encriptacion {
-   width: 80%;
-   margin: 8%;
-   margin-left: 12%;                
+        width: 90%; 
+        margin: 5%;
+        margin-left: 5%;  
     }
     .gif {
         display: none;
     }
-    .diseño_boton_copiar{
-     padding: 20px 200px;
+    .diseño_boton_copiar {
+        padding: 10px 20px; 
     }
-
+    .imagen_d {
+        width: 18%; 
+        height: auto; 
+    }
 }
 
-@media (max-width: 550px ){
-    .header {
-        padding: 5%;
-        padding-left:5%;
-        padding-right:34%;
-        gap: 100px;
-        width: 100%;
+@media (max-width: 350px) {
+
+    .texto_titulo {
+        font-size: 1.1rem; 
     }
-    .bloque{
-        padding-left: 35%;
-       
-     }
- 
+    .botones {
+        margin-right: 6%;
+        gap: 10px; 
+    }
+    .diseño_botones {
+        padding: 10px 20px; 
+        font-size: 0.8rem;
+    }
+    .input {
+        padding: 5%; 
+        font-size: 1.1rem;
+    }
+
+
     .espacio_encriptacion {
-        width: 90%;
+        width: 90%; 
         margin: 8%;
-        margin-left: 45%;                
-     }
-     .footer {
-        width: 100%;
-        padding-right:20%;
-       padding-left: 20%;
+        margin-left: 8%;  
     }
 
+    .imagen_d {
+        width: 20%; 
+        max-width: 60px; 
+
+    }
 }
+
+
 
