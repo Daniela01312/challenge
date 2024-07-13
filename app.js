@@ -8,7 +8,7 @@ function funcionEncriptar() {
     let textoUsuario = document.getElementById('encriptar').value;
     let textoEncriptado = "";
 
-    if (!/^[a-z\s]+$/.test(textoUsuario)) {
+    if (!/^[a-zñ\s]+$/.test(textoUsuario)) {
         asignarTextoElemento("#elemento_oculto", "Solo letras minúsculas y sin acentos");
         return; 
     }
@@ -48,7 +48,7 @@ function funcionDesencriptar() {
     .replace(/ober/g, 'o')
     .replace(/ufat/g, 'u');
   
-    if (!/^[a-z\s]+$/.test(textoUsuario)) {
+    if (!/^[a-zñ\s]+$/.test(textoUsuario)) {
         asignarTextoElemento("#elemento_oculto", "Solo letras minúsculas y sin acentos");
         return; 
     }
